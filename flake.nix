@@ -17,8 +17,8 @@
         let pkgs = nixpkgsFor.${system};
         in pkgs.mkShell {
           buildInputs = with pkgs; [
-            # libical.dev
             gcc # compiler, gnu cc
+            gdb # debugger
             gnumake # build
             cmake # cmake, cross-platform make generator
             # pkg-config
