@@ -1,6 +1,6 @@
-#include <stdlib.h>
-
 #include "memory.h"
+
+#include <stdlib.h>
 
 void *reallocate(void *pointer, size_t oldSize, size_t newSize) {
   if (newSize == 0) {
@@ -9,7 +9,6 @@ void *reallocate(void *pointer, size_t oldSize, size_t newSize) {
   }
 
   void *result = realloc(pointer, newSize);
-  if (result == NULL)
-    exit(1); // unable to realloc, insufficient memory?
+  if (result == NULL) exit(1);  // unable to realloc, insufficient memory?
   return result;
 }
