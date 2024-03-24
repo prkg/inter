@@ -13,7 +13,7 @@ void initValueArray(ValueArray *array) {
 }
 
 void freeValueArray(ValueArray *array) {
-  FREE_AWAY(uint8_t, array->values, array->capacity);
+  FREE_ARRAY(uint8_t, array->values, array->capacity);
   initValueArray(array);
 }
 
